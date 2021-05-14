@@ -4,6 +4,7 @@ plugins {
 }
 
 allprojects {
+    apply plugin: "java-library"
     apply plugin: "net.minecraftforge.gradle.tweaker-client"
 
     group "org.bookmc"
@@ -18,7 +19,7 @@ allprojects {
 
     configurations {
         embed
-        implementation.extendsFrom(embed)
+        api.extendsFrom(embed)
     }
 
     dependencies {
@@ -47,6 +48,6 @@ allprojects {
 
         duplicatesStrategy DuplicatesStrategy.EXCLUDE
 
-        exclude "META-INF/*.RSA", "META-INF/*.SF", "META-INF/*.DSA"
+        exclude "META-INF/*.RSA", "META-INF/*.SF", "META-INF/*.DSA", "META-INF/versions/9/module-info.class"
     }
 }
