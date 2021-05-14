@@ -1,0 +1,34 @@
+plugins {
+    id "java"
+    id "net.minecraftforge.gradle.tweaker-client" version "86b2392" apply false
+}
+
+allprojects {
+    apply plugin: "net.minecraftforge.gradle.tweaker-client"
+
+    group "org.bookmc"
+    version "1.0.0"
+
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+
+    dependencies {
+        // Required for launching
+        compileOnly "com.github.BookMC:modding:c03f14153c"
+        compileOnly "com.github.BookMC:loader:82400b61b6"
+
+        compileOnly "com.github.BookMC.minecraft:client:942199a5f1"
+    }
+
+    minecraft {
+        version = "1.8.9"
+        tweakClass = "org.bookmc.loader.BookMCLoader"
+        mappings = "stable_22"
+        runDir = "run"
+        makeObfSourceJar = false
+    }
+}

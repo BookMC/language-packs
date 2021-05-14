@@ -1,0 +1,26 @@
+plugins {
+    id "java-library"
+}
+
+repositories {
+    maven {
+        url = "https://repo.sk1er.club/repository/maven-public"
+    }
+}
+
+dependencies {
+    api "club.sk1er:Elementa:271-10809-SNAPSHOT"
+}
+
+processResources {
+    inputs.property "version", project.version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'book.mod.json'
+        expand 'version': project.version
+    }
+
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'book.mod.json'
+    }
+}

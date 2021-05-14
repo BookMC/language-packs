@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Elementa",
+    "id": "elementa",
+    "version": "${version}",
+    "author": "Sk1er LLC",
+    "entrypoint": "org.bookmc.elementa.Entrypoint::entry"
+  }
+]
