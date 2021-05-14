@@ -1,3 +1,7 @@
+plugins {
+    id "java-library"
+}
+
 repositories {
     maven {
         url = "https://repo.sk1er.club/repository/maven-public"
@@ -8,6 +12,7 @@ version = "271-10809-SNAPSHOT"
 
 dependencies {
     embed "club.sk1er:Elementa:${project.version}"
+    api project(":kotlin")
 }
 
 processResources {
