@@ -1,0 +1,9 @@
+[
+  {
+    "name": "Kotlin",
+    "id": "kotlin",
+    "version": "${version}",
+    "author": "JetBrains",
+    "entrypoint": "org.bookmc.kotlin.Entrypoint::entry"
+  }
+]

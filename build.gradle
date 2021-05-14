@@ -16,6 +16,11 @@ allprojects {
         }
     }
 
+    configurations {
+        embed
+        implementation.extendsFrom(embed)
+    }
+
     dependencies {
         // Required for launching
         compileOnly "com.github.BookMC:modding:c03f14153c"
@@ -30,5 +35,18 @@ allprojects {
         mappings = "stable_22"
         runDir = "run"
         makeObfSourceJar = false
+    }
+
+
+    jar {
+        from {
+            configurations.embed.collect {
+                it.isDirectory() ? it : zipTree(it)
+            }
+        }
+
+        duplicatesStrategy DuplicatesStrategy.EXCLUDE
+
+        exclude "META-INF/*.RSA", "META-INF/*.SF", "META-INF/*.DSA"
     }
 }

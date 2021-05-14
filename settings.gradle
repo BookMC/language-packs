@@ -19,4 +19,4 @@ pluginManagement {
 
 rootProject.name = 'utils'
 
-include ":elementa"
+include ":elementa", ":kotlin"

@@ -4,6 +4,9 @@
     "id": "elementa",
     "version": "${version}",
     "author": "Sk1er LLC",
-    "entrypoint": "org.bookmc.elementa.Entrypoint::entry"
+    "entrypoint": "org.bookmc.elementa.Entrypoint::entry",
+    "dependencies": [
+      "kotlin"
+    ]
   }
 ]
