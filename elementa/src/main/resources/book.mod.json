@@ -3,7 +3,10 @@
     "name": "Elementa",
     "id": "elementa",
     "version": "${version}",
-    "author": "Sk1er LLC",
+    "authors": [
+      "Sk1er LLC",
+      "BookMC"
+    ],
     "entrypoint": "org.bookmc.elementa.Entrypoint::entry",
     "dependencies": [
       "kotlin"
