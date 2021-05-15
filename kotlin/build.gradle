@@ -2,6 +2,8 @@ plugins {
     id "org.jetbrains.kotlin.jvm" version "1.5.0"
 }
 
+version = "1.5.0"
+
 dependencies {
     embed "org.jetbrains.kotlin:kotlin-stdlib"
 }

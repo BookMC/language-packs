@@ -14,16 +14,3 @@ dependencies {
     embed "club.sk1er:Elementa:${project.version}"
     api project(":kotlin")
 }
-
-processResources {
-    inputs.property "version", project.version
-
-    from(sourceSets.main.resources.srcDirs) {
-        include 'book.mod.json'
-        expand 'version': project.version
-    }
-
-    from(sourceSets.main.resources.srcDirs) {
-        exclude 'book.mod.json'
-    }
-}

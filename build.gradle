@@ -50,4 +50,17 @@ allprojects {
 
         exclude "META-INF/*.RSA", "META-INF/*.SF", "META-INF/*.DSA", "META-INF/versions/9/module-info.class"
     }
+
+    processResources {
+        inputs.property "version", project.version
+
+        from(sourceSets.main.resources.srcDirs) {
+            include 'book.mod.json'
+            expand 'version': project.version
+        }
+
+        from(sourceSets.main.resources.srcDirs) {
+            exclude 'book.mod.json'
+        }
+    }
 }
