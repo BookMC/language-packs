@@ -1,0 +1,20 @@
+plugins {
+    id "java-library"
+}
+
+repositories {
+    maven {
+        url = "https://repo.sk1er.club/repository/maven-public"
+    }
+}
+
+version = "312-10809-SNAPSHOT"
+
+dependencies {
+    embed("gg.essential:Elementa:${project.version}") {
+        exclude module: "kotlin-stdlib-jdk8"
+        exclude module: "kotlin-reflect"
+    }
+
+    api project(":kotlin-language-pack")
+}

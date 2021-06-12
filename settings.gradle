@@ -17,6 +17,6 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'utils'
+rootProject.name = "language-packs"
 
-include ":elementa", ":kotlin"
+include ":elementa-pack", ":kotlin-language-pack"

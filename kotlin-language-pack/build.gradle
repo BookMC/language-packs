@@ -1,0 +1,10 @@
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.5.10"
+}
+
+version = "1.5.10"
+
+dependencies {
+    embed "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    embed "org.jetbrains.kotlin:kotlin-reflect:1.5.10"
+}
